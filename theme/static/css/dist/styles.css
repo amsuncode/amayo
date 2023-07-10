@@ -791,6 +791,10 @@ select {
   right: 0.625rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1062,6 +1066,11 @@ select {
   background-color: rgb(23 162 184 / var(--tw-bg-opacity));
 }
 
+.bg-teal {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 201 151 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1217,6 +1226,11 @@ select {
 .hover\:text-yellow:hover {
   --tw-text-opacity: 1;
   color: rgb(255 193 7 / var(--tw-text-opacity));
+}
+
+.hover\:text-teal:hover {
+  --tw-text-opacity: 1;
+  color: rgb(32 201 151 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus {
