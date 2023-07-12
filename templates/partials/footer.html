@@ -1,66 +1,5 @@
-{% load static tailwind_tags %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amayo</title>
-  {% tailwind_css %}
-</head>
-
-<body>
-  <!-- navbar -->
-  <nav class="relative container mx-auto p-6">
-    <div class="flex items-center justify-between">
-      <!-- the logo text-->
-      <div>
-        <h1 class="text-black text-xl font-bold">Amayo</h1>
-      </div>
-
-      <!-- Menu Items -->
-      <div class="hidden space-x-6 md:flex">
-        <a href="{% url 'home' %}" class="hover:text-teal">Home</a>
-        <a href="#" class="hover:text-teal">About Us</a>
-        <a href="#" class="hover:text-teal">Announcements</a>
-        <a href="{% url 'papers' %}" class="hover:text-teal">Past papers</a>
-        <a href="#" class="hover:text-teal">School guide</a>
-        <a href="#" class="hover:text-teal">Pricing</a>
-      </div>
-
-      <!-- Button -->
-      <a href="#" class="p-3 px-6 pt-2 bg-black text-white rounded-full baseline hover:bg-teal md:block">Get
-        Started</a>
-    </div>
-  </nav>
-  <div class="flex justify-end">
-    <form class="mr-4">
-      <label for="default-search"
-        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
-      <div class="relative">
-        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-          <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-          </svg>
-        </div>
-        <input type="search" id="default-search" class="block p-4 mr-4 pl-10 w-full text-sm" placeholder="Search"
-          required>
-        <button type="submit"
-          class="text-white absolute right-2.5 bottom-2.5 bg-black-700 hover:bg-black-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
-      </div>
-    </form>
-  </div>
-
-  <section class="papers">
-    <div class="container flex mx-auto">
-      <h1>Here we will view papers</h1>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer class="bg-cyan fixed bottom-0 left-0 w-full">
+<!-- Footer -->
+<footer class="bg-black bottom-0 left-0 w-full">
     <!-- Flex Container -->
     <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
       <!-- Logo and social links container -->
@@ -128,6 +67,3 @@
       </div>
     </div>
   </footer>
-</body>
-
-</html>
