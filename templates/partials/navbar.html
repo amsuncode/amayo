@@ -1,23 +1,30 @@
-  <!-- navbar -->
-  <nav class="relative container mx-auto p-6">
-    <div class="flex items-center justify-between">
-      <!-- the logo text-->
-      <div>
-        <h1 class="text-black text-xl font-bold">Amayo</h1>
-      </div>
-
-      <!-- Menu Items -->
-      <div class="hidden space-x-6 md:flex">
-        <a href="{% url 'home' %}" class="hover:text-teal">Home</a>
-        <a href="#" class="hover:text-teal">About Us</a>
-        <a href="#" class="hover:text-teal">Announcements</a>
-        <a href="{% url 'papers' %}" class="hover:text-teal">Past papers</a>
-        <a href="#" class="hover:text-teal">School guide</a>
-        <a href="#" class="hover:text-teal">Pricing</a>
-      </div>
-
-      <!-- Button -->
-      <a href="#" class="p-3 px-6 pt-2 bg-cyan text-white rounded-full baseline hover:bg-teal md:block">Get
-        Started</a>
+<!-- navbar -->
+<nav class="relative container mx-auto p-6">
+  <div class="flex items-center justify-between">
+    <!-- the logo text-->
+    <div>
+      <h1 class="text-black text-xl font-bold">Amayo</h1>
     </div>
-  </nav>
+
+    <!-- Menu Items -->
+    <div class="hidden space-x-6 md:flex">
+      <a href="{% url 'home' %}" class="hover:text-teal">Home</a>
+      <a href="#" class="hover:text-teal">About Us</a>
+      <a href="#" class="hover:text-teal">Announcements</a>
+      <a href="{% url 'papers' %}" class="hover:text-teal">Past papers</a>
+      <a href="#" class="hover:text-teal">School guide</a>
+      <a href="#" class="hover:text-teal">Pricing</a>
+    </div>
+
+    {% if user.is_authenticated %}
+    <!-- Button hidden for authenticated users -->
+    <a href="{% url 'logout' %}"
+      class="p-3 px-6 pt-2 bg-cyan text-white rounded-full baseline hover:bg-teal md:block">Logout</a>
+    {% else %}
+    <!-- Button visible for anonymous users -->
+    <a href="{% url 'papers' %}"
+      class="p-3 px-6 pt-2 bg-cyan text-white rounded-full baseline hover:bg-teal md:block">Get Started</a>
+    {% endif %}
+
+  </div>
+</nav>

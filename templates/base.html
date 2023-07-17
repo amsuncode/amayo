@@ -1,19 +1,27 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amayo</title>
-    {% tailwind_css %}
-  </head>
 
-  <body>
-    {% include 'partials/navbar.html' %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amayo</title>
+  {% tailwind_css %}
+</head>
 
-    {% block content %}
-    {% endblock%}
+<body>
+  {% include 'partials/navbar.html' %} 
+  {% if messages %}
+  <div class="bg-yellow-200 text-yellow-800 p-4 mb-4 rounded relative">
+    {% for message in messages %}
+    <span class="block sm:inline">{{ message }}</span>
+    {% endfor %}
+  </div>
+  {% endif %} 
 
-    {% include 'partials/footer.html' %}
-  </body>
+  {% block content %} 
+  {% endblock%} 
+  {% include 'partials/footer.html' %}
+</body>
+
 </html>

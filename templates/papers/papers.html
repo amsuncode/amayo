@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+    <section>
+        <h1>A few papers listed below</h1>
+        {{ for paper in papers_list }}
+            <ul>
+                <li>paper</li>
+            </ul>
+        {{  endfor }}
+    </section>
 {% endblock %}
