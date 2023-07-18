@@ -1,12 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <section>
-        <h1>A few papers listed below</h1>
-        {{ for paper in papers_list }}
-            <ul>
-                <li>paper</li>
-            </ul>
-        {{  endfor }}
+    <section class="container mx-10 my-10 flex flex-row justify-center">
+        <div>
+            <h1>A few papers listed below</h1>
+        {% if papers %}
+            {% for paper in papers %}
+                <ul>
+                    <li>{{ paper.paper_title }}</li>
+                </ul>
+            {% endfor %}
+        {% else %}
+
+        <p>There are no papers in the system </p>
+
+        {% endif %}
+        </div>
     </section>
 {% endblock %}

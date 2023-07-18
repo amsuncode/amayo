@@ -11,7 +11,7 @@
       <a href="{% url 'home' %}" class="hover:text-teal">Home</a>
       <a href="#" class="hover:text-teal">About Us</a>
       <a href="#" class="hover:text-teal">Announcements</a>
-      <a href="{% url 'papers' %}" class="hover:text-teal">Past papers</a>
+      <a href="{% url 'papers' %}" class="hover:text-teal">Study</a>
       <a href="#" class="hover:text-teal">School guide</a>
       <a href="#" class="hover:text-teal">Pricing</a>
     </div>
@@ -22,7 +22,7 @@
       class="p-3 px-6 pt-2 bg-cyan text-white rounded-full baseline hover:bg-teal md:block">Logout</a>
     {% else %}
     <!-- Button visible for anonymous users -->
-    <a href="{% url 'papers' %}"
+    <a href="{% url 'login' %}"
       class="p-3 px-6 pt-2 bg-cyan text-white rounded-full baseline hover:bg-teal md:block">Get Started</a>
     {% endif %}
 
